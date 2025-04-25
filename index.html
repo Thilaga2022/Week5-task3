@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Magazine List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="fevicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <h3>Week 5 Task 3</h3>
+    <div class="container">
+        <h2>Magazine Collection</h2>
+        <input type="text" id="magInput" placeholder="Enter magazine name" autocapitalize="words" autocomplete="off"/>
+        <button id="addBtn">Add Magazine</button>
+        <p id="result" style="display: none;"></p>
+        <p id="sorted">Sorted Magazine List : </p>
+        <p id="num">No of magazines added : </p>
+    </div>
+
+
+    <script>
+        let magazineList = [];
+
+        document.getElementById("addBtn").addEventListener("click", function () {
+            let input = document.getElementById("magInput");
+            let magName = input.value.trim();
+
+            // Check for empty input
+            if (magName === "") {
+                alert("Please enter a magazine name.");
+                input.focus()
+                return;
+            }
+
+            // Check for valid string (only letters and spaces)
+            if (!/^[A-Za-z\s]+$/.test(magName)) {
+                alert("Only alphabetic characters are allowed.");
+                return;
+            }
+
+            // Check for duplicates (case-insensitive)
+            let isDuplicate = magazineList.some(name => name.toLowerCase() === magName.toLowerCase());
+            if (isDuplicate) {
+                alert("Duplicate entry! Magazine already exists.");
+                return;
+            }
+
+            // Add to array
+            magazineList.push(magName);
+            input.value = "";
+            input.focus()
+
+            // Display updated list
+           // input.style.display="flex"
+           // document.getElementById("result").textContent = magazineList.join(", ");
+            document.getElementById("num").textContent = "Number of magazines added : " + magazineList.length
+            document.getElementById("sorted").textContent = "Sorted Magazine List : " + magazineList.sort()
+
+
+            // Clear input
+            input.value = "";
+            input.focus();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    gap: 8%;
+}
+
+.container {
+    display: inline-block;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    text-align: center;
+    width: 25em;
+    height: 50vh;
+    
+}
+
+h1 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    background-color: lightblue;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+   
+}
+p:hover{
+    background-color: rgb(124, 230, 156);
+    
+    
+}
+h3 {
+    animation: blink 3s infinite;
+    color: black;
+    font-size: 24px;
+    transition: linear;
+    background-color:lightblue ;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    25% {opacity:0.8;}
+    50% { opacity: 0.5; }
+    75% {opacity:0;}
+}
+h3:hover{
+    background-color: rgb(124, 230, 156);
+}
