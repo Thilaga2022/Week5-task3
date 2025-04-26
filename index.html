@@ -43,6 +43,8 @@
             let isDuplicate = magazineList.some(name => name.toLowerCase() === magName.toLowerCase());
             if (isDuplicate) {
                 alert("Duplicate entry! Magazine already exists.");
+                input.value=""
+                input.focus()
                 return;
             }
 
