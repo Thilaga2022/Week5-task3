@@ -27,14 +27,14 @@ body {
     text-align: center;
     width: 25em;
     height: 50vh;
-    
+
 }
 
 h1 {
     font-size: 24px;
     color: #4CAF50;
     margin-bottom: 20px;
-    
+
 }
 
 input {
@@ -71,29 +71,54 @@ p {
     font-weight: bold;
     padding: 10px;
     border-radius: 5px;
-   
+
 }
-p:hover{
+
+p:hover {
     background-color: rgb(124, 230, 156);
-    
-    
+
+
 }
+
 h3 {
     animation: blink 3s infinite;
     color: black;
     font-size: 24px;
     transition: linear;
-    background-color:lightblue ;
+    background-color: lightblue;
     padding: 5px;
     border-radius: 10px;
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    25% {opacity:0.8;}
-    50% { opacity: 0.5; }
-    75% {opacity:0;}
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0;
+    }
 }
-h3:hover{
+
+h3:hover {
     background-color: rgb(124, 230, 156);
+}
+
+h2 {
+    font-family: "Agu Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 0;
 }
